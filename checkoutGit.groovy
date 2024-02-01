@@ -1,0 +1,8 @@
+def cal(String gitUrl, String gitBranch)
+{
+    checkout([
+        $class: 'GitSCM',
+        branches: [[name: gitBranch]],
+        userRemoteConfigd: [[url: gitUrl]]
+    ])
+}
